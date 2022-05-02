@@ -103,7 +103,7 @@ const person2 = {
 const person3 = person2;
 console.log(person3 === person2);
 
-const copyPerson = {...person2};
+const copyPerson = { ...person2 };
 console.log(copyPerson === person2);
 
 
@@ -118,8 +118,8 @@ console.log("\n\n----- arrow functions --------");
 //     return 3*3;
 // } 
 
-const pow = function() {
-    return 3*3;
+const pow = function () {
+    return 3 * 3;
 }
 
 const powArrow = () => {
@@ -135,7 +135,7 @@ const powShort = () => console.log("hello");
 
 // setTimeout( () => console.log("123"), 1000);
 
-const funcName = function(name) {
+const funcName = function (name) {
     console.log(`hello ${name}`);
 }
 
@@ -152,3 +152,17 @@ const funcNameArrow = (name) => {
 // }
 
 // const getValueFromId2 = (id, someText) => document.getElementById(id).value;
+
+// TERNARY
+const apiData = true;
+
+const ternary = () => {
+
+    if (apiData) {
+        return "yes"
+    } else {
+        return "no"
+    }
+
+    apiData ? "<p> asdasds</p>" : "loading..";
+}
