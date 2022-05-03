@@ -16,6 +16,24 @@ const nums1 = [5,3,4,2,1];
 const nums2 = [9, 2, 5, 6, 4, 3, 7, 10, 1, 8];
 const nums3 = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
 
-function bubbleSort(nums){ }
+
+function bubbleSort(nums){
+
+    for ( let i=0; i<nums.length; i++ ){
+
+        for ( let j=0; j<(nums.length - i - 1); j++){
+
+            if (nums[j] > nums[j+1]){
+                let holder = nums[j];
+                nums[j] = nums[j+1];
+                nums[j+1] = holder
+            }
+        }
+    } return nums
+}
+console.log(bubbleSort(nums1));
+console.log(bubbleSort(nums2));
+console.log(bubbleSort(nums3));
+
 
 // 👉 Remember to call the function and pass nums1, nums2, nums3
