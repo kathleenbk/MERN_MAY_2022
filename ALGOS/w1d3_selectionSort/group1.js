@@ -19,4 +19,29 @@
 */
 const myArr = [3,2,9,5,1,4,8]
 
-function selectionSort(arr){ }
+function selectionSort(arr){ // Looping through array and getting minimum index;
+    for (let i=0; i<arr.length; i++){
+        // Set minimum index
+        let minIndex = i;
+        // Loop through array and compare array[j] with arr[minIndex]
+        for(let j=i+1; j<arr.length; j++){
+            // check if value of arr[j] is less than the value at arr[minIndex]
+            if(arr[j] < arr[minIndex]){
+                // if the value at j is less than the value at minIndex:
+                // set minIndex equal to j
+                minIndex=j;
+            }
+        }
+        // Check if minIndex is not equal to i
+        if(minIndex != i){
+            // if it is not equal, swap the value at minIndex with the value at i
+
+            arr[minIndex] += arr[i];
+            arr[i] = arr[minIndex]-arr[i];
+            arr[minIndex] -= arr[i];
+        }
+
+    } return arr //return the sorted array
+}
+
+console.log(selectionSort(myArr));
